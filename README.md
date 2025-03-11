@@ -2,7 +2,7 @@
 
 BluetoothEnable is a Bluetooth plugin for [Flutter](https://www.flutter.io), to programtically request turning on Bluetooth within applications. 
 
-This plugin is based on [bluetooth_enable_fork](https://github.com/Alystrasz/bluetooth_enable_fork). The Registrar class is used in the Android code of this repository, but it has been removed in Flutter 3.29.0. Therefore, the implementation has been rewritten in Kotlin.
+This plugin is based on [bluetooth_enable_fork](https://github.com/Alystrasz/bluetooth_enable_fork). The PluginRegistry.Registrar was used in the Android code of this repository, but it was removed in Flutter 3.29.0. Although it is still possible to continue using Java and switch to the new FlutterPlugin interface, Kotlin is the language recommended by Google. Therefore, the plugin has been rewritten in Kotlin.
 
 ## Usage
 
