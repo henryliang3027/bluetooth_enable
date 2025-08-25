@@ -65,23 +65,6 @@ void requestBluetoothEnable() async {
   - **Android**：會彈出系統對話框請求使用者啟用藍牙，等待使用者操作後回傳結果
   - **iOS**：會彈出提示窗要求使用者前往設定頁面手動啟用藍牙，方法會立即回傳 `"false"`（若使用者已啟用藍牙，下次呼叫時會回傳 `"true"`）
 
-#### 使用範例
-```dart
-import 'package:bluetooth_enable_fork/bluetooth_enable.dart';
-
-void requestBluetoothEnable() async {
-  String result = await BluetoothEnable.enableBluetooth;
-  
-  if (result == "true") {
-    print("藍牙已啟用");
-    // 執行需要藍牙的功能
-  } else {
-    print("藍牙未啟用");
-    // 處理藍牙未啟用的情況
-  }
-}
-```
-
 ## 平台支援
 支援 Android 與 iOS
 
