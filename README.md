@@ -35,15 +35,17 @@ flutter pub get
 ```dart
 import 'package:bluetooth_enable_fork/bluetooth_enable.dart';
 
-// 請求開啟藍牙
-BluetoothEnable.enableBluetooth.then((result) {
+void requestBluetoothEnable() async {
+  String result = await BluetoothEnable.enableBluetooth;
+  
   if (result == "true") {
-    // 藍牙已成功啟用
+    print("藍牙已啟用");
+    // 執行需要藍牙的功能
+  } else {
+    print("藍牙未啟用");
+    // 處理藍牙未啟用的情況
   }
-  else if (result == "false") {
-    // 藍牙未被啟用
-  }
-});
+}
 ```
 
 完整使用範例請參考：`example/lib/main.dart`
